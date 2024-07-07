@@ -2,15 +2,17 @@
 
 ## **Description**
 
-A simple text editor that runs in the browser and meets the PWA criteria. The application functions online as well as offline.
+This is a portfolio listing six of my projects that I have completed over the course of the UT Coding Bootcamp. The application includes an About Me page, links to the six projects and their Github repos, a resume page with a downloadable resume, and a contact page to be filled out by the user.
 
-It was built with: JavaScript, Node.js, Express.js, Concurrently, IndexedDB, Webpack and Workbox.
+The application includes a footer with links to my social media sites.
 
-### [Click Here to View Application](https://progressive-web-applications-text-editor.onrender.com)
+It was built with: React, Bootstrap, react-dom, react-router-dom, and built with Vite.
+
+### [Click Here to View Application]()
 
 ## Installation
 
-Users can access the Progressive Web Applications (PWA) Text Editor in the browser. If users would like to install the application they can click the `Install` button located in the application.
+Users can access the portfolio in their browser by clicking the link above.
 
 ## Contact Me
 

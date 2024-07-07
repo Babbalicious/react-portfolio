@@ -23,6 +23,22 @@ function Contact() {
     }
   };
 
+  const handleNameBlur = () => {
+    if (!name) {
+      setErrorMessage("Name is required");
+    } else {
+      setErrorMessage(""); // Clear the error message if the name is valid
+    }
+  };
+
+  const handleEmailBlur = () => {
+    if (!email) {
+      setErrorMessage("Email is required");
+    } else {
+      setErrorMessage(""); // Clear the error message if the name is valid
+    }
+  };
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
@@ -31,7 +47,7 @@ function Contact() {
       return;
     }
 
-    alert(`${name}, I will get back to you soon!`);
+    alert(`Thank you ${name}, I will get back to you soon!`);
 
     setName("");
     setMessage("");
@@ -48,6 +64,7 @@ function Contact() {
           value={name}
           name="name"
           onChange={handleInputChange}
+          onBlur={handleNameBlur}
           type="text"
           placeholder="name"
           className="form-control w-50"
@@ -58,6 +75,7 @@ function Contact() {
           value={email}
           name="email"
           onChange={handleInputChange}
+          onBlur={handleEmailBlur}
           type="email"
           placeholder="email"
           className="form-control w-50"
@@ -74,13 +92,12 @@ function Contact() {
           rows="4"
           placeholder="message"
         />
-
+        <br />
         {errorMessage && (
           <div>
             <p className="error-text">{errorMessage}</p>
           </div>
         )}
-        <br />
         <button className="contact-submit" type="submit">
           Submit
         </button>
