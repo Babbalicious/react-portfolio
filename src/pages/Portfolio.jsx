@@ -4,22 +4,27 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 const Portfolio = () => {
   const projects = [
-    { title: 'Project 1', description: 'Description of project 1', link: '#' },
+    { title: 'Just Another Text Editor', description: 'Description of project 1', link: '#', imageURL: './images/jate.png' },
     { title: 'Project 2', description: 'Description of project 2', link: '#' },
-    // Add more projects as needed
+    { title: 'Project 3', description: 'Description of project 3', link: '#' },
+    { title: 'Project 4', description: 'Description of project 4', link: '#' },
   ];
 
   return (
-    <Container>
-      <h1 className="text-center my-4">Projects</h1>
-      <Row>
-        {projects.map((project, index) => (
-          <Col key={index} md={4} className="mb-4">
-            <ProjectCard {...project} />
-          </Col>
-        ))}
-      </Row>
-    </Container>
+    <div className='bg-primary-subtle'>
+      <Container fluid>
+        <div className="no-margin w-100">
+          <h1 className="text-center p-3 my-4 page-title">Portfolio</h1>
+          <Row>
+            {projects.map((project, index) => (
+              <Col key={index} md={4} className="mb-4 d-flex justify-content-center">
+                <ProjectCard {...project} />
+              </Col>
+            ))}
+          </Row>
+          </div>
+      </Container>
+    </div>
   );
 };
 

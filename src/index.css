@@ -24,8 +24,10 @@ a:hover {
 
 body {
   margin: 0;
+  padding: 0;
+  width: 100%;
   display: flex;
-  place-items: center;
+  place-items: top;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -65,4 +67,46 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensures it stays on top of other content */
+  width: 100%;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: #d4d4d4;
+}
+
+#root {
+  position: sticky;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+
+
+.page-title {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  padding: 0;
+}
+
+.contact-prompt {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.contact-submit {
+  margin: 15px;
 }
