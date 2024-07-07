@@ -1,14 +1,30 @@
-import React from 'react';
-import { Card, Button } from 'react-bootstrap';
+import React from "react";
+import { Card, Button } from "react-bootstrap";
+import "./projectCard.css";
 
-const ProjectCard = ({ title, description, link, imageURL }) => {
+const ProjectCard = ({ title, description, link, imageURL, github }) => {
   return (
-    <Card style={{ width: '18rem', backgroundImage: `url(${imageURL})`, backgroundSize: 'cover', backgroundPosition: 'center'  }}>
-      <Card.Body>
-        <Card.Title>{title}</Card.Title>
-        <Card.Text>{description}</Card.Text>
-        <Button variant="primary" href={link} target="_blank">View Project</Button>
-      </Card.Body>
+    <Card className="custom-card">
+      <a href={link}>
+        <div
+          className="card-img-bg"
+          style={{ backgroundImage: `url(${imageURL})` }}
+        >
+          <a href={github} target="_blank" rel="noopener noreferrer">
+            <img
+              src="./images/Github-128.webp"
+              alt="{title}"
+              className="link-image"
+            />
+          </a>
+
+          {/* <Card.Img variant="top" src={imageURL} alt={title} className="card-img" /> */}
+          <Card.Body className="overlay">
+            <Card.Title>{title}</Card.Title>
+            <Card.Text>{description}</Card.Text>
+          </Card.Body>
+        </div>
+      </a>
     </Card>
   );
 };

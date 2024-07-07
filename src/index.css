@@ -92,10 +92,8 @@ header {
   width: 100%;
 }
 
-
-
 .page-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .container {
@@ -109,4 +107,15 @@ header {
 
 .contact-submit {
   margin: 15px;
+}
+
+.resume {
+  font-family: "Montserrat", sans-serif;
+  font-size: larger;
+}
+
+.about-image {
+  float: left; /* Floats the image to the left */
+  margin: 0 15px 15px 0; /* Adds margin to the right and bottom */
+  max-width: 200px; /* Limits the width of the image */
 }
