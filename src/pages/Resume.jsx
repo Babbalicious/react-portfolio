@@ -7,7 +7,7 @@ const Resume = () => {
       <div className="text-start resume px-5 pb-5 container-fluid">
         <p className="lead">
           Download my{" "}
-          <a href="#" download>
+          <a href="./documents/resume3.pdf" download>
             resume
           </a>
         </p>
